@@ -1,11 +1,15 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
+import Header from "@reejs/react/header";
 import Footer from "../components/Footer";
 import RuntimesList from "../components/RuntimesList";
 import URLImportsFeature from "../components/URLImportsFeature";
 export default function () {
   return (
     <>
+    <Header>
+      <title>Reejs - The fastest way to build a website</title>
+    </Header>
       <Navbar />
       <Hero />
       <div className="mx-auto my-24 md:max-w-[84rem]">
