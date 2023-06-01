@@ -3,6 +3,12 @@
   "version": "0.0.1",
   "type": "module",
   "main": "src/index.js",
+  "scripts": {
+    "postinstall": "reejs i && reejs sync",
+    "start": "node packit/index.js",
+    "build": "reejs packit node",
+    "dev": "reejs packit node -d"
+  },
   "dependencies": {
     "reejs": "latest",
     "@reejs/imports": "latest",
