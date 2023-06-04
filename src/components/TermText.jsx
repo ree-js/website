@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Island from "@reejs/react/island";
 
 export default function TermText() {
   useEffect(() => {
@@ -13,7 +12,7 @@ export default function TermText() {
 
   }, []);
   return (
-    <Island on="client:idle" className="inline-block text-left text-gray-500 dark:text-gray-200">
+    <div className="inline-block text-left text-gray-500 dark:text-gray-200">
     <pre className="opacity-0 transition transition-duration-300"> <span className="text-teal-600">$</span> npx <span className="text-emerald-500">reejs</span> init <span className="text-sky-500">reejs-app</span> <span className="hidden md:inline text-indigo-500">--features react,tailwind,api,static</span></pre>
     <pre className="opacity-0 transition transition-duration-300"> <span className="text-teal-600">$</span> cd <span className="text-sky-500">reejs-app</span> </pre>
     <pre className="opacity-0 transition transition-duration-300"> <span className="text-teal-600">$</span> npx <span className="text-emerald-500">reejs</span> install </pre>
@@ -25,5 +24,5 @@ export default function TermText() {
     <pre className="opacity-0 transition transition-duration-300"> <span className="text-pink-600"><span className="font-black">  PACKIT</span> v0.9.x</span></pre>
     <pre className="opacity-0 transition transition-duration-300 text-gray-500"> <span className="text-pink-600">  ➜</span>  📦 in <span className="text-blue-600">0.019s</span> </pre>
     <pre className="opacity-0 transition transition-duration-300 text-gray-500"> <span className="text-pink-600">  ➜</span>  🚆 : <span className="text-blue-600">http://localhost:3000</span> </pre>
-      </Island>)
+      </div>)
 }
