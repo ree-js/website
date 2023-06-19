@@ -13,7 +13,7 @@ export async function Head(){
   })
 }
 
-export default function () {
+export default function Home() {
   return (
     <>
       <Navbar />

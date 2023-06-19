@@ -13,10 +13,9 @@ export default function () {
         </h1>
         <p className="text-gray-600 dark:text-gray-300 mt-8 mx-6 md:mx-16 font-semibold text-xl md:text-2xl">A full stack meta framework that defines a new way to make websites that lets you focus on what you love the most - developing new ideas into reality. With Ree.js, we make sure that you develop faster, without compromising developer experience.</p>
         <div className="border-1 border-pink-600/10 hover:border-pink-600/50
-        bg-gradient-to-r from-purple-600/10 to-pink-600/10 hover:from-purple-600/20 hover:to-pink-600/20
-        hover:rounded-md transition-[border-radius,border] duration-200
+        bg-gradient-to-r from-purple-600/10 to-pink-600/10 hover:from-purple-600/20 hover:to-pink-600/20 rounded-md duration-200
           backdrop-blur-sm font-bold text-xl md:text-2xl mt-6 mx-6 md:mx-16 w-48">
-          <Link href="/guide/getting-started" className="text-center my-auto w-full h-full block px-4 py-2
+          <Link href="/docs/getting-started/introduction" className="text-center my-auto w-full h-full block px-4 py-2
           bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600
           ">Get Started</Link>
         </div>

@@ -1,0 +1,126 @@
+import Alert from "../../components/docs/helpers/Alert";
+
+# Packit
+
+> Ah yes, here we a**ree**... A truly te**ree**fying fast transpiler and plugin manager that powers Reejs! ⚡⚡⚡
+
+Reejs uses it's own in-house file generator (you might call it file-to-file transpiler) that has a plugin system.
+Packit generally enables your code to use URL Imports directly without setting up `import_map.json` (but reejs still needs import maps for your projects).
+Alongwith that, it allows transpiling different file extensions like `.jsx` or `.ts` files to js.
+
+Packit is generally divided into four parts:
+
+- Readers
+- Transpilers
+- Writers
+- Copiers
+
+Packit generates a `packit/index.js` file in your project that is usually the entry point for the available services.
+
+---
+
+## Using Packit
+
+As stated in the Commands section, you may use `reejs packit <service> [options]` where the service must be one of the following:
+
+- `node`
+- `deno` (under the hood it is replaced with `deno-deploy`)
+- `deno-deploy`
+- `bun`
+- `static`
+- `vercel`
+- `edge`
+
+By default, Packit packs your project as a production "build".
+You may use `--dev` or `-d` flag to start a development server. For supported services, Packit will automatically run the appropriate command to start a development server as a child process.
+
+<Alert text={`We don't build your code, but since you know that "build" generally means building your code, we mean the final output of your code and not the "build process". Throughout the documentation, we'll refer to the final output of your code as "build", and Packit "packs" your code.`} />
+
+---
+
+## Configuration
+
+When generating a new Reejs project, `packit.config.js` file will be already created at the root of the project.
+You may add Packit-compatible plugins via this config file.
+
+Here's a sample `packit.config.js` file:
+
+```js
+export default {
+  readers: [],
+  transpilers: [],
+  writers: [],
+  copiers: []
+}
+```
+
+---
+
+### Readers
+
+A Reader returns back which files must be used in the project. It must export the following object:
+
+```js
+{
+  name: "example",
+  run: ()=>{
+    return ["src/example.js"] // return an array of files
+  }, //a function that returns an array of files, if undefined, Packit will look for `pattern` property
+
+  pattern: "src/*.js" // a glob pattern to match files
+  exclude: ["src/example.js"] // an array of files to exclude. Is optional even when you use `pattern` property
+}
+```
+
+By default, Reejs has three Readers:
+
+- pages
+- components
+- apis
+
+To override any of the inbuilt Reader(s), just export a new Reader in your config file with the same name (case-sensitive) and you're good to go!
+
+---
+
+### Transpilers
+
+A Transpiler will transpile the file for the extension it is configured for. It must export the following object:
+
+```js
+{
+  name: "js",
+  run: (fileURL, service)=>{
+    return fileURL; // return the fileURL of transpiled/built file.
+    //by default, Reejs saves files in `.reejs/serve/<shasum of fileURL>.js` format. we recommend you to do the same.
+    //you can make use of `service` argument to check which service is packit running for. Take a look at the `Using Packit` section for more info.
+  }
+}
+```
+
+[Writers](#writers) will be ask configured Transpiler to transpile the mentioned file, instead of transpiling the whole directory.
+That's just one of the **ree**asons why Packit is so fast!
+
+So for the following **ree**ason, we expect the Transpiler to walk through the code provided to it, look for imports, and recursively transpile them too.
+Packit, or more specifically the Writer expects you to do so.
+
+<Alert text="Make sure to use `@reejs/imports/specialFileImport.js` module if you want to enable URL Imports. This package is used under the hood for the following default Transpilers given below." />
+
+By default, Reejs has Transpilers set for the following file extensions:
+
+- js
+- jsx
+- ts
+- tsx
+- mdx
+- md
+
+To override any of the inbuilt Transpiler(s), just export a new Transpiler in your config file with the same name (case-sensitive) and you're good to go!
+
+---
+
+### Writers
+
+A Writer will append text (code) to the end of the `packit/index.js` in your project alongside that, it
+will modify available `DATA` property, add/removing/modifying variables that it has processed and provide it to the next Writer(s).
+
+Unlike Readers & Transpilers, Writers are processed serially (without using `await Promise.all()`), in order to make sure that the code is appended in the correct order, and the necessary `DATA` property is available to the next Writer(s).

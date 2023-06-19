@@ -1,0 +1,3 @@
+/* esm.sh - esbuild bundle(mdast-util-gfm@2.0.2) node production */
+import{gfmAutolinkLiteralFromMarkdown as r,gfmAutolinkLiteralToMarkdown as m}from"./bf12e8.js";import{gfmFootnoteFromMarkdown as t,gfmFootnoteToMarkdown as n}from"./4d5d54.js";import{gfmStrikethroughFromMarkdown as f,gfmStrikethroughToMarkdown as a}from"./265920.js";import{gfmTableFromMarkdown as k,gfmTableToMarkdown as e}from"./955229.js";import{gfmTaskListItemFromMarkdown as g,gfmTaskListItemToMarkdown as i}from"./42eb68.js";function d(){return[r,t(),f,k,g]}function w(o){return{extensions:[m,n(),a,e(o),i]}}export{d as gfmFromMarkdown,w as gfmToMarkdown};
+//# sourceMappingURL=mdast-util-gfm.mjs.map

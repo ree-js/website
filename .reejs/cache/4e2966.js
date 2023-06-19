@@ -1,0 +1,3 @@
+/* esm.sh - esbuild bundle(mdast-util-definitions@5.1.2) node production */
+import{visit as f}from"./1834b7.js";var e={}.hasOwnProperty;function s(i){let t=Object.create(null);if(!i||!i.type)throw new Error("mdast-util-definitions expected node");return f(i,"definition",o=>{let n=r(o.identifier);n&&!e.call(t,n)&&(t[n]=o)}),c;function c(o){let n=r(o);return n&&e.call(t,n)?t[n]:null}}function r(i){return String(i||"").toUpperCase()}export{s as definitions};
+//# sourceMappingURL=mdast-util-definitions.mjs.map

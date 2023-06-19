@@ -1,0 +1,3 @@
+/* esm.sh - esbuild bundle(mdast-util-mdx@2.0.1) node production */
+import{mdxExpressionFromMarkdown as r,mdxExpressionToMarkdown as m}from"./b1a9a5.js";import{mdxJsxFromMarkdown as n,mdxJsxToMarkdown as d}from"./55e034.js";import{mdxjsEsmFromMarkdown as x,mdxjsEsmToMarkdown as s}from"./3e35da.js";function i(){return[r,n(),x]}function k(o){return{extensions:[m,d(o),s]}}export{i as mdxFromMarkdown,k as mdxToMarkdown};
+//# sourceMappingURL=mdast-util-mdx.mjs.map

@@ -1,0 +1,3 @@
+/* esm.sh - esbuild bundle(fault@2.0.1) node production */
+import E from"./b6db90.js";var p=Object.assign(r(Error),{eval:r(EvalError),range:r(RangeError),reference:r(ReferenceError),syntax:r(SyntaxError),type:r(TypeError),uri:r(URIError)});function r(e){return a.displayName=e.displayName||e.name,a;function a(n,...o){let t=n&&E(n,...o);return new e(t)}}export{r as create,p as fault};
+//# sourceMappingURL=fault.mjs.map
