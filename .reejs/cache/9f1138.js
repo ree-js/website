@@ -1,0 +1,2 @@
+import{gfm as r}from"./a2fc3c.js";import{gfmFromMarkdown as m,gfmToMarkdown as f}from"./70d956.js";function e(s={}){let o=this.data();t("micromarkExtensions",r(s)),t("fromMarkdownExtensions",m()),t("toMarkdownExtensions",f(s));function t(a,n){(o[a]?o[a]:o[a]=[]).push(n)}}export{e as default};
+//# sourceMappingURL=remark-gfm.bundle.mjs.map

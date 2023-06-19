@@ -1,0 +1,3 @@
+/* esm.sh - esbuild bundle(micromark-util-decode-string@1.1.0) node production */
+import{decodeNamedCharacterReference as o}from"./2d5c1d.js";import{decodeNumericCharacterReference as a}from"./81a011.js";var n=/\\([!-/:-@[-`{-~])|&(#(?:\d{1,7}|x[\da-f]{1,6})|[\da-z]{1,31});/gi;function m(r){return r.replace(n,f)}function f(r,c,e){if(c)return c;if(e.charCodeAt(0)===35){let t=e.charCodeAt(1),d=t===120||t===88;return a(e.slice(d?2:1),d?16:10)}return o(e)||r}export{m as decodeString};
+//# sourceMappingURL=micromark-util-decode-string.mjs.map

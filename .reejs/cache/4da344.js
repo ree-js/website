@@ -1,0 +1,2 @@
+var d=t=>async(e,o)=>{await o();let r=e.req.headers.get("Accept-Encoding"),a=t?.encoding??/gzip|deflate/,s=r?.match(a);if(!r||!s||!e.res.body)return;let n=s[0],c=new CompressionStream(n);e.res=new Response(e.res.body.pipeThrough(c),e.res),e.res.headers.set("Content-Encoding",n)};export{d as compress};
+//# sourceMappingURL=compress.bundle.js.map
