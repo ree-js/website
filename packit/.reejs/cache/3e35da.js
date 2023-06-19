@@ -1,3 +1,0 @@
-/* esm.sh - esbuild bundle(mdast-util-mdxjs-esm@1.3.1) node production */
-var n={enter:{mdxjsEsm:a},exit:{mdxjsEsm:o,mdxjsEsmData:r}},d={handlers:{mdxjsEsm:x}};function a(s){this.enter({type:"mdxjsEsm",value:""},s),this.buffer()}function o(s){let m=this.resume(),t=this.exit(s),e=s.estree;t.value=m,e&&(t.data={estree:e})}function r(s){this.config.enter.data.call(this,s),this.config.exit.data.call(this,s)}function x(s){return s.value||""}export{n as mdxjsEsmFromMarkdown,d as mdxjsEsmToMarkdown};
-//# sourceMappingURL=mdast-util-mdxjs-esm.mjs.map

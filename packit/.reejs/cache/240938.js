@@ -1,3 +1,0 @@
-/* esm.sh - esbuild bundle(unist-util-position@4.0.4) node production */
-var i=r("start"),p=r("end");function e(t){return{start:i(t),end:p(t)}}function r(t){return s;function s(o){let n=o&&o.position&&o.position[t]||{};return{line:n.line||null,column:n.column||null,offset:n.offset>-1?n.offset:null}}}export{p as pointEnd,i as pointStart,e as position};
-//# sourceMappingURL=unist-util-position.mjs.map

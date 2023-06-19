@@ -1,3 +1,0 @@
-/* esm.sh - esbuild bundle(micromark-extension-mdxjs@1.0.1) node production */
-import{Parser as m}from"./dba38d.js";import s from"./59d13a.js";import{mdxExpression as t}from"./e0f8c7.js";import{mdxJsx as e}from"./f1faab.js";import{mdxMd as n}from"./7607a1.js";import{mdxjsEsm as i}from"./b0311a.js";import{combineExtensions as p}from"./13fa6c.js";function E(r){let o=Object.assign({acorn:m.extend(s()),acornOptions:{ecmaVersion:2020,sourceType:"module"},addResult:!0},r);return p([i(o),t(o),e(o),n])}export{E as mdxjs};
-//# sourceMappingURL=micromark-extension-mdxjs.mjs.map

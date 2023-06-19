@@ -1,3 +1,0 @@
-/* esm.sh - esbuild bundle(mdast-util-to-markdown@1.5.0/lib/util/pattern-compile) node production */
-function c(e){if(!e._compiled){let o=(e.atBreak?"[\\r\\n][\\t ]*":"")+(e.before?"(?:"+e.before+")":"");e._compiled=new RegExp((o?"("+o+")":"")+(/[|\\{}()[\]^$+*?.-]/.test(e.character)?"\\":"")+e.character+(e.after?"(?:"+e.after+")":""),"g")}return e._compiled}export{c as patternCompile};
-//# sourceMappingURL=pattern-compile.js.map

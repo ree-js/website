@@ -1,3 +1,0 @@
-/* esm.sh - esbuild bundle(micromark-extension-gfm@2.0.3) node production */
-import{combineExtensions as m,combineHtmlExtensions as o}from"./13fa6c.js";import{gfmAutolinkLiteral as r,gfmAutolinkLiteralHtml as f}from"./341cff.js";import{gfmFootnote as i,gfmFootnoteHtml as e}from"./1277c1.js";import{gfmStrikethrough as g,gfmStrikethroughHtml as n}from"./793cee.js";import{gfmTable as l,gfmTableHtml as p}from"./c7b685.js";import{gfmTagfilterHtml as s}from"./473f56.js";import{gfmTaskListItem as u,gfmTaskListItemHtml as H}from"./d3b375.js";function L(t){return m([r,i(),g(t),l,u])}function A(t){return o([f,e(t),n,p,s,H])}export{L as gfm,A as gfmHtml};
-//# sourceMappingURL=micromark-extension-gfm.mjs.map
