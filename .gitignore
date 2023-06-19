@@ -1,4 +1,4 @@
-.reejs/**.cache
+.reejs
 **/package-lock.json
 **/node_modules 
 package-lock.json
