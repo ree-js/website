@@ -1,3 +1,0 @@
-/* esm.sh - esbuild bundle(is-unicode-supported@1.3.0) node production */
-import e from"node:process";function n(){return e.platform!=="win32"?e.env.TERM!=="linux":!!e.env.CI||!!e.env.WT_SESSION||!!e.env.TERMINUS_SUBLIME||e.env.ConEmuTask==="{cmd::Cmder}"||e.env.TERM_PROGRAM==="Terminus-Sublime"||e.env.TERM_PROGRAM==="vscode"||e.env.TERM==="xterm-256color"||e.env.TERM==="alacritty"||e.env.TERMINAL_EMULATOR==="JetBrains-JediTerm"}export{n as default};
-//# sourceMappingURL=is-unicode-supported.mjs.map
