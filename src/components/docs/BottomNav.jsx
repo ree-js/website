@@ -1,4 +1,4 @@
-import slugify from 'https://esm.sh/slugify@1.6.6';
+import slugify from 'slugify';
 
 export default function BottomNav({next, prev,parent}){
   return(

@@ -1,6 +1,6 @@
 import Body from '../../../components/docs/Body';
 
-export default function DocsRoot({c}) {
+export default function DoNotHydrate({c}) {
   return (
     <Body parent={c.req.param("parent")} child={c.req.param("id") || ""} c={c} />
   )

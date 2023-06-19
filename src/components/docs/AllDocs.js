@@ -8,6 +8,8 @@ import importMaps from "../../md/basics/importMaps.mdx";
 import packit from "../../md/basics/packit.mdx";
 import server from "../../md/basics/server.mdx";
 import struct from "../../md/basics/struct.mdx";
+import hydration from "../../md/basics/hydration.mdx";
+import urlImports from "../../md/basics/urlImports.mdx";
 
 import cmdsIndex from "../../md/commands/index.mdx";
 import cmdsInit from "../../md/commands/init.mdx";
@@ -26,7 +28,9 @@ export default {
     "project structure": struct,
     "import maps": importMaps,
     "packit": packit,
-    "server": server
+    "server": server,
+    "hydration": hydration,
+    "url imports": urlImports
   },
   "commands": {
     "": cmdsIndex,

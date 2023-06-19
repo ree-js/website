@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 
-export default function NotFound({c}){
+export default function DoNotHydrate({c}){
   c.status(404);
   return (
     <>

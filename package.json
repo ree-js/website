@@ -13,7 +13,21 @@
     "reejs": "latest",
     "@reejs/imports": "latest",
     "@reejs/server": "latest",
-    "@reejs/react": "latest"
+    "@reejs/react": "latest",
+    "@twind/preset-autoprefix": "file:./.reejs/deps/@twind/preset-autoprefix",
+    "@twind/core": "file:./.reejs/deps/@twind/core",
+    "@twind/preset-tailwind": "file:./.reejs/deps/@twind/preset-tailwind",
+    "@twind/with-react": "file:./.reejs/deps/@twind/with-react",
+    "@hono/serve-static": "file:./.reejs/deps/@hono/serve-static",
+    "react-dom": "file:./.reejs/deps/react-dom",
+    "react": "file:./.reejs/deps/react",
+    "@headlessui/react": "file:./.reejs/deps/@headlessui/react",
+    "hono": "file:./.reejs/deps/hono",
+    "slugify": "file:./.reejs/deps/slugify",
+    "debug": "file:./.reejs/deps/debug",
+    "@twind/preset-typography": "file:./.reejs/deps/@twind/preset-typography",
+    "@hono/node-server": "file:./.reejs/deps/@hono/node-server",
+    "render": "file:./.reejs/deps/render"
   },
   "license": "MIT"
 }

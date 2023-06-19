@@ -14,7 +14,8 @@
     "@hono/node-server": "https://esm.sh/@hono/node-server@1.0.2?bundle",
     "hono/compress": "https://esm.sh/hono@3.2.5/compress?bundle",
     "hono": "https://esm.sh/hono@3.2.5?bundle",
-    "@headlessui/react": "https://esm.sh/@headlessui/react@1.7.14?external=react,react-dom&bundle"
+    "@headlessui/react": "https://esm.sh/@headlessui/react@1.7.14?external=react,react-dom&bundle",
+    "slugify": "https://esm.sh/slugify@1.6.6"
   },
   "browserImports": {
     "debug": "https://esm.sh/preact@10.15.1/debug",
