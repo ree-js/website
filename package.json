@@ -6,7 +6,7 @@
   "scripts": {
     "postinstall": "reejs i && reejs sync",
     "start": "node packit/index.js",
-    "build": "reejs packit node",
+    "build": "reejs packit node -d -o",
     "dev": "reejs packit node -d"
   },
   "dependencies": {
