@@ -21,7 +21,7 @@ export default function () {
         </div>
       </div>
       <div className="z-[50] md:w-1/2 rounded-lg md:rounded-r-none md:rounded-l-2xl bg-gradient-to-r from-purple-600 to-pink-600 h-96 mt-8 md:mt-24 mx-2 md:mx-0">
-        <div class="z-[100] md:m-8 shadow-2xl shadow-pink-600/20 group relative flex h-96 md:h-full w-full cursor-default flex-col overflow-hidden rounded-lg bg-white/70 dark:bg-black border-2 border-pink-600/50 hover:border-pink-600 transition-[border] duration-300">
+        <div class="z-[50] md:m-8 shadow-2xl shadow-pink-600/20 group relative flex h-96 md:h-full w-full cursor-default flex-col overflow-hidden rounded-lg bg-white/70 dark:bg-black border-2 border-pink-600/50 hover:border-pink-600 transition-[border] duration-300">
           <div class="relative flex w-full items-center border-b-2 border-slate-400 dark:border-slate-900 py-4">
             <div class="ml-4 flex">
               <div class="h-3 w-3 rounded-full bg-red-400"></div>

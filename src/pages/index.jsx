@@ -54,10 +54,10 @@ export default function Home() {
       <p className="text-2xl md:text-3xl font-bold text-center text-purple-500">
         And a lot more features!
       </p>
-      <p className="text-xl md:text-2xl font-medium text-center text-indigo-400">
+      <p className="mx-3 md:mx-0 text-xl md:text-2xl font-medium text-center text-indigo-400">
         So what are you waiting for? Get started with Ree.js today!
       </p>
-      <Link href="https://github.com/rovel" className="text-slate-500 block text-center mt-4">Want to make this page look cooler/better? Edit and make a pull request!</Link>
+      <Link href="https://github.com/rovel" className="mx-3 md:mx-0 text-slate-500 block text-center mt-4">Want to make this page look cooler/better? Edit and make a pull request!</Link>
       <Footer />
     </>
   );
