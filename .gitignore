@@ -5,4 +5,5 @@ package-lock.json
 **/version.js
 **/bun.lockb
 bun.lockb
-packit
+packit/**
+packit.build.js

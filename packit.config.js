@@ -1,4 +1,7 @@
-import { URLImport } from "@reejs/imports";
+import { URLImport, NativeImport } from "@reejs/imports";
+
+let fs = await NativeImport("node:fs");
+
 export default {
   writers: [
     {
@@ -17,5 +20,22 @@ export default {
         }
       }
     }
+  ],
+  loaders:[{
+    name: "css_loader",
+    load: async (id)=>{
+      if(id.endsWith(".css")){
+        //convert css to string
+        let file = fs.readFileSync(id);
+        let code = `if(globalThis.window && !globalThis.Deno){
+          let style = document.createElement("style");
+          style.innerHTML = \`${file}\`;
+          document.head.appendChild(style);
+        };
+        export default {};
+        `;
+        return {code};
+      }
+    }}
   ]
 }
