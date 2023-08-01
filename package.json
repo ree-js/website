@@ -7,7 +7,7 @@
     "postinstall": "reejs i && reejs sync",
     "start": "node packit/index.js",
     "build": "rm -rf packit && npm run packit && npm run packit",
-    "packit": "DEBUG=\"r\" PSC_DISABLE=\"r\" reejs packit node -d -o",
+    "packit": "DEBUG=\"r\" PSC_DISABLE=\"r\" reejs packit node",
     "dev": "reejs packit node -d"
   },
   "dependencies": {
