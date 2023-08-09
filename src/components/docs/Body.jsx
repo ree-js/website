@@ -2,7 +2,7 @@ import Navbar from "../Navbar";
 import Sidebar from "./Sidebar";
 import BottomNav from "./BottomNav";
 import AllDocs from "./AllDocs";
-import NotFound from "../../pages/docs/*";
+import NotFound from "../../pages/docs/404";
 export default function DocsRoot({parent, child,c}) {
   child = child.replaceAll("-", " ").toLowerCase();
   parent = parent.replaceAll("-"," ").toLowerCase();

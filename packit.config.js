@@ -1,4 +1,4 @@
-import { URLImport, NativeImport } from "@reejs/imports";
+import { URLImport, NativeImport } from "https://esm.sh/@reejs/imports@2.2.28?deps=@reejs/utils@1.1.29";
 
 let fs = await NativeImport("node:fs");
 

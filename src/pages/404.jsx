@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar";
 
-export default function DoNotHydrate({c}){
-  c.status(404);
+export default function NotFound(){
   return (
     <>
     <Navbar />
@@ -12,3 +11,15 @@ export default function DoNotHydrate({c}){
     </>
   )
 }
+
+export function generateMetadata(c){
+  return({
+  title: `Reejs | 404`,
+  description: "Sussy Baka",
+  icon: "/favicon.ico",
+  openGraph: {
+    themeColor: "#805ad5",
+    type: "website",
+  }
+  });
+};

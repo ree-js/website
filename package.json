@@ -29,7 +29,8 @@
     "react": "file:./.reejs/deps/react",
     "slugify": "file:./.reejs/deps/slugify",
     "render": "file:./.reejs/deps/render",
-    "@headlessui/react": "file:./.reejs/deps/@headlessui/react"
+    "@headlessui/react": "file:./.reejs/deps/@headlessui/react",
+    "preact": "file:./.reejs/deps/preact"
   },
   "license": "MIT"
 }

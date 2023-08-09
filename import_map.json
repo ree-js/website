@@ -2,9 +2,10 @@
   "imports": {
     "react": "https://esm.sh/preact@10.16.0/compat?bundle",
     "react-dom": "https://esm.sh/preact@10.16.0/compat?bundle",
-    "render": "https://esm.sh/preact-render-to-string@6.2.0?bundle",
+    "preact": "https://esm.sh/preact@10.16.0",
+    "render": "https://esm.sh/preact-render-to-string@6.2.0?external=preact",
     "@hono/serve-static": "https://esm.sh/@hono/node-server@1.0.2/serve-static?bundle",
-    "debug": "https://esm.sh/preact@10.16.0/debug?bundle",
+    "debug": "https://esm.sh/preact@10.16.0/debug?bundle&external=preact",
     "@twind/core": "https://cdn.jsdelivr.net/npm/@twind/core/+esm",
     "@twind/preset-autoprefix": "https://cdn.jsdelivr.net/npm/@twind/preset-autoprefix/+esm",
     "@twind/preset-tailwind": "https://cdn.jsdelivr.net/npm/@twind/preset-tailwind/+esm",
@@ -20,9 +21,10 @@
     "react-router-dom": "https://esm.sh/react-router-dom@6.13.0?external=react,react-dom"
   },
   "browserImports": {
-    "debug": "https://esm.sh/preact@10.16.0/debug",
-    "react": "https://esm.sh/preact@10.16.0/compat",
-    "react-dom": "https://esm.sh/preact@10.16.0/compat",
+    "debug": "https://esm.sh/preact@10.16.0/debug?bundle&external=preact",
+    "react": "https://esm.sh/preact@10.16.0/compat?bundle",
+    "react-dom": "https://esm.sh/preact@10.16.0/compat?bundle",
+    "preact": "https://esm.sh/preact@10.16.0",
     "@twind/core": "https://cdn.jsdelivr.net/npm/@twind/core/+esm",
     "@twind/preset-autoprefix": "https://cdn.jsdelivr.net/npm/@twind/preset-autoprefix/+esm",
     "@twind/preset-typography": "https://esm.sh/@twind/preset-typography@1.0.7",
