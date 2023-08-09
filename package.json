@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "postinstall": "reejs i && reejs sync",
-    "start": "node packit/index.js",
+    "start": "node packit.build.js",
     "build": "rm -rf packit && npm run packit && npm run packit",
-    "packit": "DEBUG=\"r\" PSC_DISABLE=\"r\" reejs packit vercel -d -o",
+    "packit": "DEBUG=\"r\" PSC_DISABLE=\"r\" reejs packit node -d -o",
     "dev": "reejs packit node -d"
   },
   "dependencies": {
