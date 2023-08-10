@@ -32,7 +32,7 @@ export default function URLImportsFeature() {
           </div>
         </div>
       </div>
-      <p className="italic text-slate-400 dark:text-slate-700 text-right py-2">*Above Graph not to scale.</p>
+      <p className="italic text-slate-400 dark:text-slate-700 text-right py-2">*Above Graph for the dependencies used in default reejs project.</p>
     </div>
   )
 }
