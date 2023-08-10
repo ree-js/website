@@ -4,7 +4,7 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "start": "reejs i && reejs sync && reejs packit node && node packit/index.js",
+    "start": "reejs i && reejs sync && reejs packit node -d -o && reejs packit node -d",
     "packit": "DEBUG=\"r\" PSC_DISABLE=\"r\" reejs packit node -d -o",
     "dev": "reejs packit node -d"
   },
