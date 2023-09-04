@@ -8,6 +8,14 @@ Reejs uses it's own in-house file generator (you might call it file-to-file tran
 Packit generally enables your code to use URL Imports directly without setting up `import_map.json` (but reejs still needs import maps for your projects).
 Alongwith that, it allows transpiling different file extensions like `.jsx` or `.ts` files to js.
 
+### Fun Fact:
+
+Packit comes with all the goodies you will always expect to be available in a code bundler like vite or swc. These includes, but not limited to:
+- plugins
+- file watching
+- caching
+- able to monkey-patch the default builtin plugins to suit your needs
+
 Packit is generally divided into four parts:
 
 - Readers
@@ -50,7 +58,7 @@ export default {
   readers: [],
   transpilers: [],
   writers: [],
-  copiers: []
+  copyToPackit: []
 }
 ```
 
@@ -124,3 +132,107 @@ A Writer will append text (code) to the end of the `packit/index.js` in your pro
 will modify available `DATA` property, add/removing/modifying variables that it has processed and provide it to the next Writer(s).
 
 Unlike Readers & Transpilers, Writers are processed serially (without using `await Promise.all()`), in order to make sure that the code is appended in the correct order, and the necessary `DATA` property is available to the next Writer(s).
+
+---
+
+### copyToPackit
+
+A Copier will copy the file to the `packit` directory in your project.
+By default, Packit copies:
+- node_modules
+- package.json
+- import_map.json
+- tailwind.config.js
+- twind.config.js
+- .reecfg
+
+It must export the following sample function:
+
+<Alert text="Although you can consume the `isDevMode` argument in your function, copiers are only ran during build mode, and not in dev mode." />
+
+```js
+(service, isDevMode, glob)=>{
+    // isDevMode will always be false as copiers are only ran during build mode
+    // glob is the package exported from `npm:glob@10.2.7`
+    // you must return back an array of files and folders to copy to the `packit` directory
+    let files = glob.sync("example/**/*");
+    let folders = glob.sync("more_codes/**/*", { onlyDirectories: true });
+    return { files, folders };
+  }
+```
+
+---
+
+If you have made this far, you're ready to create your own Packit-compatible plugin!
+
+## Packit plugins
+
+Packit plugins are generally npm packages that are published to npm registry. We decided to keep our api similar to vite and unplugin, so that you can easily port your plugins to Reejs.
+
+We tried some of the plugins from vite and unplugin, and they worked flawlessly with Reejs! 🎉
+Some of them needed a little bit of tweaking, but they worked!
+Here are some of the plugins that we tried and they worked:
+- [millionjs](https://github.com/aidenybai/million/)
+- [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import)
+
+There might be a chance that popular plugins not made for reejs might work, as long as they don't depend on any internal API or are specifically made for a specific bundler.
+Your best bet is to try their `unimport` or `vite` versions of those plugins.
+
+Example config for `unimport`:
+
+```js
+import AutoImport from 'unplugin-auto-import';
+
+export default {
+  plugins:[
+    AutoImport.vite({
+      include: [
+      /\.[tj]sx?$/,
+      ],
+      imports: ["react"]
+    })
+  ]
+}
+```
+
+Using this code in any page like `index.jsx` works flawlessly!
+```jsx
+console.log(useEffect);// <- this works!
+export default function(){
+			return <h1 className="text-3xl font-bold text-violet-600">Hello from Reejs!</h1>
+		}
+```
+
+Example config for `million`:
+<Alert text="Install the npm version of million and link it for the server side of import maps. Use URLs for browser side import maps. The server side is known to leverage npm hacks and methods which has a higher chance of not properly working." />
+
+`packit.config.js`:
+```js
+import million from "million/compiler";
+export default {
+  plugins:[
+    million.unplugin.vite({ // <- here we chose the vite edition of Millionjs
+      mode: 'react', server: true
+    })
+  ]
+}
+```
+
+If million properly works, try adding the following code in any page like `index.jsx`:
+```jsx
+import { block } from 'million/react';
+ 
+const LionBlock = block(function Lion() {
+  return <img src="https://million.dev/lion.svg" />;
+});
+ 
+export default LionBlock;
+```
+
+Turn on debug mode in packit by typing `d` in packit console, turn off file caching by typing `a` there too, and then type `r` to repack your code.
+You will see something like this:
+![hot packit pics](https://cdn.discordapp.com/attachments/889369494651293696/1148214640380219402/image.png)
+
+---
+
+Now if you want to create your own plugin, start using unplugin or vite as a reference, and you're good to go! Join our discord server if you need any help!

@@ -15,6 +15,9 @@ import cmdsIndex from "../../md/commands/index.mdx";
 import cmdsInit from "../../md/commands/init.mdx";
 import cmdsAdd from "../../md/commands/add.mdx";
 import cmdsPackit from "../../md/commands/packit.mdx";
+import cmdsRepl from "../../md/commands/repl.mdx";
+import cmdsTask from "../../md/commands/task.mdx";
+import cmdsX from "../../md/commands/x.mdx";
 
 export default {
   "getting started": {
@@ -36,6 +39,9 @@ export default {
     "": cmdsIndex,
     "init": cmdsInit,
     "add": cmdsAdd,
-    "packit": cmdsPackit
+    "packit": cmdsPackit,
+    "repl": cmdsRepl,
+    "task": cmdsTask,
+    "x": cmdsX
   }
 }
